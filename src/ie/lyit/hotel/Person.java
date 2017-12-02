@@ -1,14 +1,14 @@
 package ie.lyit.hotel;
+import java.io.Serializable;
 
-public abstract class Person {
+public abstract class Person implements Serializable {
+	//Used as a version identifier for a Serializable class
+	private static final long serialVersionUID = 1;
 	protected Name name; // COMPOSITION - Person HAS-A name
 	protected String address;
 	protected String phoneNumber;
 
 	// Default Constructor
-	// Called when object is created like this 
-	//   ==> Person pObj = new Person();
-	//   NOTE-This won't work because Person is abstract
 	public Person(){
 	   name=new Name();
 	   address=null;
@@ -16,8 +16,6 @@ public abstract class Person {
 	}
 
 	// Initialisation Constructor
-	// Called when object would have been created like this (not possible cos abstract!)
-	//    ==> Person pObj = new Person("Mr", "Joe", "Doe", "2 Hi Road, Ennis", "087 1234567");
 	public Person(String t, String fN, String sn, String address, String phoneNumber){
 		name=new Name(t, fN, sn);	// Calls Name initialisation constructor
 		this.address=address;
@@ -29,7 +27,7 @@ public abstract class Person {
 	//		then displays address and phoneNumber
 	@Override  // Overrides Object toString()
 	public String toString(){
-		return name + "," + address + "," + phoneNumber;
+		return name + ", " + address + ", " + phoneNumber;
 	}	
 	
 	// equals() method

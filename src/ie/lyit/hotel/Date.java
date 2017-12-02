@@ -1,13 +1,3 @@
-/**
- * Class: B.Sc. in Computing
- * Instructor: Maria Boyle
- * Description: Models a Date
- * Date: 18/09/2017
- * @author Maria Boyle
- * @version 1.0
- * NOTES:This Date class contains no error handling to ensure d/m/y in correct range.
- *       Error handling will be added when Exception Handling is revised.
-**/
 package ie.lyit.hotel;
 
 public class Date{

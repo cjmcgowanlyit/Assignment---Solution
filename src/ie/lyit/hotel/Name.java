@@ -1,15 +1,10 @@
-/**
- * Class: B.Sc. in Computing
- * Instructor: Maria Boyle
- * Description: Models a Name
- * Date: 18/09/2017
- * @author Maria Boyle
- * @version 1.0
-**/
 package ie.lyit.hotel;
+import java.io.Serializable;
 
-public class Name {
-	// Instance Variables
+public class Name implements Serializable{
+	//Used as a version identifier for a Serializable class
+	private static final long serialVersionUID = 1;
+	//nstance variables
 	private String title;
 	private String firstName;	
 	private String surname;		
@@ -37,7 +32,7 @@ public class Name {
 	//		 or System.out.print(n1.toString());
 	@Override
 	public String toString(){
-	   return title + " " + firstName + " " + surname;
+	   return title + ", " + firstName + ", " + surname;
 	}
 	
 	// equals() method
